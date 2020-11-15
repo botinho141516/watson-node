@@ -1,0 +1,40 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ]
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src/*"
+    ]
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "mysql": "^2.18.1",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/runtime": "^7.12.5",
+    "nodemon": "^2.0.6",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "start": "babel-node ./src/server.js",
+    "transpile": "babel server.js --out-dir dist-server",
+    "dev": "nodemon --exec babel-node src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
