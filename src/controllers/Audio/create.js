@@ -6,6 +6,8 @@ import path from 'path';
 export const createAudioRoute = async (req, res) => {
   const { text } = req.body;
 
+  console.log(text)
+
   const { audio } = await synthesizeText(text);
 
   const outPath = path.join('audios');

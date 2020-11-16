@@ -3,12 +3,12 @@
 
 - Clone ou baixe o repositório 
 ```shell
-	git clone https://github.com/botinho141516/Trabalho2-2016005610.git
+	git clone https://github.com/botinho141516/watson-node
 ```
 
 - Entre no projeto recém clonado
 ```shell
-	cd Trabalho2-2016005610-master
+	cd watson-node
 ```
 
 - Instale as dependências
@@ -20,7 +20,7 @@
 ```shell
 	cp .env.example .env
 ``` 
-- Abra o recém criado .env e edite o valor da variável DBNAME para o nome do banco a ser criado e mais tarde utilizado. (Lembrando que o nome não pode conter apenas números)
+- Abra o recém criado .env e edite o valor das variaveis conforme a legenda. (Lembrando que o nome do banco não pode conter apenas números)
 
 - Rode o script de criação de banco e tabelas
 ```shell

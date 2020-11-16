@@ -13,25 +13,24 @@ const addAudioToList = ({ path, text }) => {
     </ul>`;
 }
 
-const createNewAudio = async (event) => {
-  console.log(event)
-  event.preventDefault();
+const createNewAudio = async () => {
   const text = document.querySelector('#audio-text-area').value;
 
-  const newAudioResponse = await fetch('http://localhost:8000/audio', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ text }),
-    signal: abortController.signal
-  });
-  console.log(newAudioResponse)
+  const request = new XMLHttpRequest();
 
-  const { path } = await newAudioResponse.json();
+  request.open('POST', '/audio', true)
+  request.setRequestHeader('content-type', 'application/json');
+  request.responseType = 'json';
 
-  addAudioToList({ text, path })
 
+  request.onloadend = (loadedRequest) => {
+    const { response } = loadedRequest.target;
+    const { path } = response;
+
+    addAudioToList({ text, path })
+  };
+
+  request.send(JSON.stringify({ text }));
 }
 
 const fetchAllAudios = async () => {
@@ -45,10 +44,9 @@ const fetchAllAudios = async () => {
     addAudioToList({ path: audio_path, text });
   })
 }
+
+document.querySelector('#send-audio-button').onclick = createNewAudio;
+
 window.onload = () => {
   fetchAllAudios()
-};
-
-window.onbeforeunload = () => {
-  abortController.abort();
 };
