@@ -24,7 +24,7 @@
 
 - Rode o script de criação de banco e tabelas
 ```shell
-	npm run-script create-database
+	npm run create-database
 ```
 
 - Inicie a aplicação
