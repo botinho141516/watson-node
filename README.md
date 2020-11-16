@@ -22,6 +22,8 @@
 ``` 
 - Abra o recém criado .env e edite o valor das variaveis conforme a legenda. (Lembrando que o nome do banco não pode conter apenas números)
 
+-Espere a instalação das dependências ser finalizada.
+
 - Rode o script de criação de banco e tabelas
 ```shell
 	npm run create-database
@@ -32,4 +34,4 @@
 	npm start
 ```
 
-- Ela esta disponível em http://localhost:3000
+- Ela esta disponível em http://localhost:8000
