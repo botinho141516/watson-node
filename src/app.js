@@ -14,6 +14,8 @@ app.use(helmet());
 
 app.use('/audios', express.static(path.join(__dirname, '..', 'audios')));
 
+app.use('/', express.static(path.join(__dirname, 'public')));
+
 app.use(routes);
 
 app.use(errorHandler);

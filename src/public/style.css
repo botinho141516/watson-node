@@ -1,0 +1,131 @@
+/* * {
+  border: 1px solid red;
+} */
+
+body {
+  margin:0;
+  padding:0;
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+li {
+  list-style: none;
+}
+
+audio {
+  width: auto;
+  min-width: 250px;
+}
+
+.container {
+  display:flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin:auto;
+  justify-content: center;
+  flex-direction: row;
+  background:linear-gradient(90deg,#16d9ac,#13335f)
+}
+
+.create-audio-panel {
+  margin:auto;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  height:70vh;
+  width:calc(50vw - 200px);
+  border-radius: 12px;
+}
+
+.read-audio-panel {
+  overflow-y:auto;
+  overflow-x:hidden;
+  margin:auto;
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height:70vh;
+  width:calc(50vw - 200px);
+  max-width:50vw;
+  border-radius: 12px;
+}
+.read-audio-panel li {
+  margin:auto;
+  display:flex;
+  flex-direction: column;
+  height:auto;
+  padding:0;
+  width:calc(50vw - 200px);
+  max-width:50vw;
+}
+
+.read-audio-panel li ul {
+  padding:0;
+  margin:8px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 300px;
+  max-width: 350px;
+}
+.read-audio-panel li ul span{
+  margin:6px;
+  padding: 5px 10px;
+}
+
+.audio-list-container {
+  overflow-y:auto;
+  overflow-x:hidden;
+  margin:auto;
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height:400px;
+  width:calc(50vw - 200px);
+  max-width:50vw;
+  border-radius: 12px;
+}
+
+.audio-list-title {
+  margin:auto;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+#audio-text-area {
+  padding:10px;
+  margin:15px 0;
+  max-width:calc(50vw - 250px);
+  max-height: 60vh;
+}
+
+.audio-list-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+.audio-list-container::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.audio-list-container::-webkit-scrollbar-thumb {
+  background-color: #1695d9;
+}
+
+#send-audio-button {
+  height:40px;
+  width:100px;
+  margin:auto;
+}
+

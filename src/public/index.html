@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watson Text-to-Speech</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <content class="container">
+    <div class="create-audio-panel">
+      <div class="form-field">
+        <label for="audio-text-area" style="font-size: 1.4rem;">Novo Comentário</label>
+        <textarea id="audio-text-area" cols="40" rows="5"></textarea>
+        <button id="send-audio-button" onclick="createNewAudio(event)">Vocalizar</button>
+      </div>
+    </div>
+    <div class="read-audio-panel">
+      <span class="audio-list-title">Comentários</span>
+      <div class="audio-list-container">
+        <li id="audio-list">
+        </li>
+      </div>
+    </div>
+  </content>
+</body>
+
+</html>
