@@ -53,6 +53,11 @@ const main = async () => {
 }
 
 (async () => {
-  await main();
-  process.exit(0);
+  try {
+    await main();
+  } catch (CreateDatabaseError) {
+    console.log(CreateDatabaseError);
+  } finally {
+    process.exit(0);
+  }
 })();
